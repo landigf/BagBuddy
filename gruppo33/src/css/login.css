@@ -1,0 +1,346 @@
+/* stili esterni */
+@import url(https://fonts.googleapis.com/css?family=Poppins:300);
+
+/*------------------------------------
+                MAIN
+------------------------------------*/
+
+main {
+  padding: 80px 0; 
+  margin: auto;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body{
+    min-height: 100vh; 
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: linear-gradient( #023338, #e6e6dd);
+    display: flex; 
+    flex-direction: column; 
+   }
+
+/*------------------------------------
+                FORM
+------------------------------------*/
+   
+
+.formPart {
+    position: relative; 
+    margin-bottom: 150px;
+    z-index: 1;
+    text-align: center;
+    width: 400px;
+    padding: 40px; 
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+#registerContainer{
+    width: 500px;
+    padding: 40px;
+    margin: 0;
+}
+
+.changePasswordVisible {
+    display: none !important;
+}
+
+#changePasswordContainer {
+  margin-bottom: 150px;
+}
+
+
+* input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 13px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+#shownUserSecurityQuestion {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 15px;
+  color: #fff;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+h2  {
+    color:white;
+}
+
+#securityQuestionRegister {
+  border-radius: 15px;
+  background-color: white;
+}
+
+.formPart .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+.formPart .message a {
+    color: #289bb8;
+    text-decoration: none;
+}
+
+.passwordInputRegister {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.passwordInputRegister input {
+  width: 100%; 
+}
+
+.passwordInputRegister ul {
+  list-style-type: none; 
+  padding: 8px 0; 
+  margin: 5px 0; 
+  color: white; 
+  font-family: 'Poppins', sans-serif; 
+  font-size: 10px; 
+  text-align: left;
+  width: 100%;
+}
+
+.passwordInputRegister li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 3px; 
+}
+
+.passwordInputRegister li::before {
+  content: "•"; 
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px; 
+}
+
+.newPasswordInput ul {
+  list-style-type: none; 
+  padding: 8px 0; 
+  margin: 5px 0; 
+  color: white; 
+  font-family: 'Poppins', sans-serif; 
+  font-size: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.newPasswordInput li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 3px; 
+}
+
+.newPasswordInput li::before {
+  content: "•"; 
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px; 
+}
+
+li.valid {
+  color: #4CAF50; 
+}
+
+li.invalid {
+  color: #ff0000; 
+}
+
+/*------------------------------------
+                BUTTON
+------------------------------------*/
+
+button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #289bb8;
+    font-size: 16px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 15px;
+    letter-spacing: 2px;
+    background: transparent; 
+    border: 2px solid #289bb8; 
+  }
+  
+button:hover {
+    background: #289bb8;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #289bb8,
+                0 0 25px #289bb8,
+                0 0 50px #289bb8,
+                0 0 100px #289bb8;
+  }
+
+button:disabled {
+    pointer-events: none; 
+    opacity: 0.5; 
+    cursor: not-allowed; 
+    background: transparent; 
+    box-shadow: none; 
+    border: 2px solid #999; 
+}
+
+button:disabled:hover {
+  background: transparent !important;
+  color: #999 !important;
+  box-shadow: none !important;
+  border-color: #999 !important;
+}
+
+
+button span {
+    position: absolute;
+    display: block;
+}
+
+button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #289bb8);
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+}
+
+button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #289bb8);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%,100% {
+        top: 100%;
+    }
+}
+
+button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #289bb8);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%,100% {
+        right: 100%;
+    }
+}
+
+button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #289bb8);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,100% {
+        bottom: 100%;
+    }
+}
+
+/*------------------------------------
+                VISIBILITY
+------------------------------------*/
+
+.hidden {
+    display: none !important;
+}
+
+.formError.visible {
+  display: block; 
+}
+
+/*------------------------------------
+                ERRORS
+------------------------------------*/
+
+.error-message {
+  color: #ff0000;  
+  background-color: rgba(255, 87, 34, 0.1); 
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: 14px;
+  text-align: center; 
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+.formError {
+  display: none; 
+  color: #ff0000; 
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+  font-size: 13px;
+  text-align: left;  
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+/*------------------------------------
+                FOOTER
+------------------------------------*/
+
+
+footer {
+  margin-top: auto;
+}

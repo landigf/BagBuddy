@@ -1,0 +1,335 @@
+/*------------------------------------
+            GLOBAL STYLES
+------------------------------------*/
+body, main {
+    padding-top: 0px; 
+    margin-top: 0px;
+    box-sizing: content-box;
+}
+
+button {
+    width: 60%;
+    height: 50px;
+    font-size: 16px;
+    background-color: rgb(41,40,38);
+    border-radius: 35px;
+    color: #e6e6dd; 
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: translateY(-1px);
+    color: white; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+div label {
+    font-size: 18px;
+    font-weight: bold; 
+}
+
+/*------------------------------------
+              HEADER
+------------------------------------*/
+.headerContainer {
+    background-color: rgba(0, 0, 0, 0.942);  
+}
+
+header .opacity {
+    background: rgba(0, 0, 0, 0.862); 
+}
+
+.headerButtons input {
+    color: #c8c8bc;
+}
+
+#loginButton:hover input, 
+#registerButton:hover input, 
+#profileButton:hover input, 
+#newBagLink:hover input,
+#logoutHeaderButton:hover input {
+    color: white; 
+}
+
+/*------------------------------------
+             INTRODUCTION
+------------------------------------*/
+.introductionContainer {
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(41,40,38));
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.introduction #logo {
+    width: 50%; 
+    padding-bottom: 20px;
+}
+
+.introduction h1 {
+    margin-top: 100px;
+    color: #e6e6dd;  
+    margin-bottom: 0; 
+    font-size: 30px; 
+}
+
+.introduction p {
+    color: #e6e6dd;  
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px; 
+}
+
+#wave {
+    width: 100%;
+}
+
+#bottomWave {
+    width: 100%;
+    display: block;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#scorri {
+    padding-top: 20px; 
+    font-style: italic;
+    font-size: 12px;
+    cursor: pointer; 
+}
+
+#scorri.opacity {
+    opacity: 0; 
+}
+
+/*------------------------------------
+        RESPONSIVE INTRODUCTION
+------------------------------------*/
+@media (max-width: 768px) {
+    .introduction h1 {
+        font-size: 120%;
+    }
+
+    .introduction p {
+        font-size: 100%;
+    }
+}
+
+/*------------------------------------
+         FORM AND INPUTS
+------------------------------------*/
+main form {
+    background-color: #e6e6dd;
+}
+
+#step-1.visible, #step-2.visible , #step-3.visible , #step-4.visible  {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px; 
+}
+
+#step-5.visible {
+    width: 100%;
+    max-height: 80%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px; 
+}
+
+
+#valigia-form input, 
+#valigia-form select {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 10px;
+    border: transparent;
+    border-radius: 50px;
+}
+
+/*------------------------------------
+              STEPS
+------------------------------------*/
+/* Step 1 */
+#step-1 > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.destinazione {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+div.date > div {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-direction: row;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Step 2 and Step 5 */
+#step-5-interno, #step-2-interno {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+#step-5 img, #step-2 img {
+    box-sizing: content-box;
+}
+
+#step-5 input[type="checkbox"], 
+#step-2 input[type="radio"] {
+    display: none;
+}
+
+#step-2 label img {
+    width: 170px;
+    height: 170px;
+    cursor: pointer;
+}
+
+#step-5 label img{
+    width: 170px;
+    height: 170px;
+    cursor: pointer;
+}
+
+#step-5 input[type="checkbox"]:checked + label img {
+    transform: scale(1.1); 
+    background: radial-gradient(circle, #68c6c8, transparent 60%);
+}
+
+#step-5 label img:hover, 
+#step-2 label img:hover {
+    transform: scale(1.05); 
+}
+
+/*------------------------------------
+          ANIMATIONS
+------------------------------------*/
+.fadeIn {
+    animation: fade-in 5s forwards; 
+} 
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeOut {
+    animation: fade-out 3s forwards; 
+} 
+
+@keyframes fade-out {
+    from {
+        opacity: 1; 
+    }
+    to {
+        opacity: 0; 
+    }
+}
+
+.vibrating {
+    animation: vibrazione 5s ease-in-out infinite;
+}
+
+@keyframes vibrazione {
+    0% { transform: translateY(0); }
+    10% { transform: translateY(-5px); }
+    20% { transform: translateY(5px); }
+    30% { transform: translateY(-8px); }
+    40% { transform: translateY(8px); }
+    50% { transform: translateY(0); }
+    60% { transform: translateY(-5px); }
+    70% { transform: translateY(5px); }
+    80% { transform: translateY(-8px); }
+    90% { transform: translateY(8px); }
+    100% { transform: translateY(0); }
+}
+
+/*------------------------------------
+          SUGGESTIONS LIST
+------------------------------------*/
+#suggestions-list {
+    color: #333;
+    width: 90%; 
+    overflow-y: auto;
+    list-style: none;
+    scrollbar-width: none;
+    max-height: 200px;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 1;
+    padding: 0; 
+    transform: translateY(-15px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#suggestions-list li {
+    cursor: pointer;
+    padding: 8px 12px; 
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.2s;
+}
+
+#suggestions-list li:hover {
+    background-color: #f0f0f0;
+}
+
+#suggestions-list.hidden {
+    opacity: 0;
+}
+
+/*------------------------------------
+             UTILITIES
+------------------------------------*/
+.hidden {
+    display: none; 
+}
+
+.big {
+    font-size: 50px;
+    font-weight: bold; 
+    color: rgb(41,40,38);
+}

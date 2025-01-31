@@ -1,0 +1,520 @@
+/*------------------------------------
+              MAIN
+------------------------------------*/
+
+main {
+  background: linear-gradient(to bottom, #e6e6dd, rgb(47, 46, 45));
+}
+
+.hidden {
+  display:none; 
+}
+
+/*------------------------------------
+              HEADER
+------------------------------------*/
+
+.headerContainer {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.918), #e6e6e6df);  
+}
+
+header .opacity {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.918), #e6e6ddc0);  
+}
+
+.headerButtons input {
+  color: rgb(41,40,38); 
+}
+
+#loginButton:hover input, 
+#registerButton:hover input, 
+#profileButton:hover input, 
+#newBagLink:hover input {
+  color: black; 
+}
+
+/*------------------------------------
+          PROFILE CONTAINER
+------------------------------------*/
+
+.profileContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/*------------------------------------
+           BUTTON STYLES
+------------------------------------*/
+
+#info button:disabled {
+  border-radius: 35px;
+  padding: 10px 20px;
+  background-color: rgb(163, 163, 163);
+  color: rgb(41,40,38);  
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  cursor: not-allowed;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#info .negButtons {
+  border-radius: 35px;
+  padding: 10px 20px;
+  background-color: rgb(41,40,38);
+  color: #e6e6dd;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#info .posButtons {
+  border-radius: 35px;
+  padding: 10px 20px;
+  background-color: #0b6a73;
+  color: #e6e6dd;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#info button:hover {
+  transform: translateY(-1px);
+  color: white; 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*eliminaAccount e logOut*/
+.bottomButtons {
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+/*modificaProfilo e salvaCambiamenti e annulla*/
+.rightButtons {
+  justify-content: right;
+}
+
+#editButton, #passwordButton {
+  border-radius: 35px;
+  padding: 10px 20px;
+  background-color: #555;
+  color: #e6e6dd;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/*------------------------------------
+      VISUALIZZAZIONE INFO & BAGS
+------------------------------------*/
+
+.visualization {
+  padding: 30px 40px 30px 40px; 
+  width: 100%;
+}
+
+/* Titolo della sezione (Informazioni Personali / I miei Viaggi) */
+.visualization h1 {
+  font-size: 30px;
+  font-weight: bold; 
+  margin-bottom: 20px;
+  margin-left: 15px; 
+  margin-right: 15px; 
+  text-align: center;
+  color: rgb(41,40,38);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*------------------------------------
+        INFO + CAMBIO PASSWORD
+------------------------------------*/
+
+#info div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px; 
+  width: 100%; 
+}
+
+#info form {
+  padding: 0;
+}
+
+#info p {
+  font-size: 18px;
+  color: rgb(41, 40, 38);
+  font-weight: bold;
+  margin: 10px 0 20px 0;  
+}
+
+/* Form per il cambio password */ 
+
+#changePassword fieldset {
+  border-color: transparent;
+  border-radius: 10px; 
+  padding: 20px; 
+  max-width: 100%; 
+  margin: 20px auto;
+  background-color: white; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+#changePassword p {
+  font-size: 16px;
+  width: 100%; 
+  color: #555;
+  font-weight: bold;
+  padding: 0; 
+  margin: 10px 0 20px 0; 
+}
+
+#changePassword legend {
+  font-size: 20px; 
+  font-weight: bold; 
+  color: rgb(41,40,38);  
+}
+
+/* Input Styles */
+
+main input {
+  width: 100%; 
+  padding: 10px;
+  margin-top: 5px; 
+  border: 1px solid #ccc;  
+  box-sizing: border-box; 
+  font-size: 1em; 
+  border-radius: 35px;
+  color: #555;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+input[type="password"]:disabled {
+  cursor: not-allowed;
+  background-color: #5555552e;
+}
+
+input[type="text"]:disabled, 
+input[type="email"]:disabled {
+  background-color: transparent;
+  border-color: transparent;
+  cursor:default; 
+  margin: 0; 
+  padding: 0; 
+  border-radius: 0;
+}
+
+input[type="text"]:not([disabled]), 
+input[type="email"]:not([disabled]) {
+  font-style: italic;
+}
+
+input:not([disabled]):hover {
+  transform: translateY(-1px); 
+}
+
+/*Aggiusta questa cosa quando hover su info*/
+input[type="text"]:not([disabled]):hover, 
+input[type="email"]:not([disabled]):hover {
+  background-color: white;
+}
+/* Error Message */
+.error {
+  color: #ff0000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/*------------------------------------
+              BAGS
+------------------------------------*/ 
+
+/* Contenitore delle valigie */
+.bags {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 30px; 
+}
+
+/* Design comune per tutte le valigie */
+.bag, .addBag {
+  background-color: #fff;
+  border-radius: 16px;
+  width: 300px;
+  height: 180px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.315);
+  position: relative;
+  overflow: hidden;
+  border: 3px dashed #4982838a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translate(10px, 10px) rotate(-2deg); 
+}
+
+.bag:hover, .addBag:hover {
+  transform: translateY(-5px); 
+  cursor: pointer;
+}
+  
+/* Header della borsa */
+.bagHeader {
+  background-color: #68c6c8b5;
+  padding: 10px;
+  border-bottom: 2px solid #5174758a;
+  text-align: center;
+}
+
+.bagName {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(41,40,38);
+  margin: 0;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
+.destination {
+  font-size: 14px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  color: #555;
+  margin: 0;
+}
+  
+/* Dettagli interni della valigia */
+.bagDetails {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date{
+  text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  flex: 1;
+}
+
+.date .label{
+  font-size: 12px;
+  color: #555;
+  }
+
+.date .value{
+  font-size: 15px;
+  font-weight: bold;
+  color: #555;
+}
+
+.image {
+  border-left: 3px dashed #4982838a;
+  padding-left: 10px;
+  flex: 1; 
+}
+
+.image img {
+  object-fit: contain;
+  width: 100%; 
+  background: radial-gradient(circle, #346869a6, white 60%);
+}
+  
+/* Biglietto posteriore */
+.behindBag {
+  margin: 10px; 
+  width: 320px;
+  height: 180px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.315);
+  border: 3px dashed #4982838a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  
+/* Pulsante per aggiungere una nuova valigia */
+.addBag p {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.addBag {
+  transform: translate(7px, 7px);
+}
+
+.addBag:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+  
+/* Area Sorting */
+
+#sorting {
+  padding-left: 15px; 
+}
+
+#sorting select{
+  border-radius: 35px;
+  background-color: rgb(41,40,38);
+  color: #e6e6dd;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  margin: 5px 5px 5px 0; 
+  padding: 5px; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#sorting p {
+  font-size: 14px;
+  color: #555;
+  font-weight: bold;
+  margin: 0;
+}
+  
+#sorting select:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*------------------------------------
+          MENU LATERALE
+------------------------------------*/
+.menu{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+  border-radius: 48px;
+  box-sizing: border-box; 
+  border: 16px solid #f5ebe0;
+  background: radial-gradient(circle, #f3f3ee, #b5b5ad);
+  overflow: hidden;
+  margin: 30px 60px;
+  box-shadow: 16px 16px 48px #2e364330; 
+}
+
+.tabs label {
+  font-weight: bold; 
+  cursor: pointer; 
+  color: rgba(41, 40, 38); 
+  opacity: .4; 
+  transition: opacity .4s ease-in-out;
+  display: block; 
+  text-align: center; 
+  z-index: 100; 
+  user-select: none;
+  display: block;
+  margin-right: 50px; 
+  font-size: 22px;
+  padding: 10px; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.tabs input[type="radio"]{
+  display: none;
+  width: 0;
+
+}
+
+.tabs label:hover, .tabs input[type="radio"]:checked+label {
+  opacity: 1; 
+}
+
+.tabs{
+  width: 100%;
+  max-width: 200px;
+  min-width: 150px;
+  display: fit-content; 
+  display: flex;
+  padding: 30px; 
+  flex-direction: column; 
+  justify-content: top; 
+  position: relative;
+  flex: 1 0 200px;
+}
+
+.marker{
+  position: absolute; 
+  width: 100%;
+  height: 200%;
+  display: flex; 
+  flex-direction: column;
+  top: calc(-100% );
+  left: 0;
+  transition: transform .2s ease-in-out; 
+}
+
+.marker #bottom, .marker #top{
+  background-color: #f5ebe0;
+  box-shadow: 32px 32px 48px #2e364315; 
+}
+
+.marker #top{
+  height: calc(50%);
+  margin-bottom: auto; 
+  border-radius: 0 0 32px 0; 
+}
+
+.marker #bottom{
+  height: calc(50% - 48px);
+  border-radius: 0 32px 0 0; 
+}
+
+
+#infoButton:checked ~ .marker{transform: translateY(30px);}
+#bagsButton:checked ~ .marker{transform: translateY(80px);}
+
+/*------------------------------------
+          STYLE RESPONSIVE
+------------------------------------*/
+@media (max-width: 768px) {
+  /*menu laterale*/
+  .tabs {
+    flex: 1 0 100px;
+  }
+  .tabs label {
+    font-size: 18px; 
+  }
+  .marker #top{
+    height: calc(50%);
+  } 
+  .marker #bottom{
+    height: calc(50% - 40px);
+  }
+
+  /*bags*/
+  .bags {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    padding-right: 20px; 
+  }
+  .menu {
+    gap: 0px; 
+  }
+  .behindBag {
+    margin: 20px; 
+  }  
+}

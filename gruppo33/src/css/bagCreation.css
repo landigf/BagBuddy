@@ -1,0 +1,379 @@
+/*------------------------------------
+        STILI GENERALI
+------------------------------------*/
+#bag {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  margin: 10px; 
+}
+
+#bag input{
+  width: 250px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 50px;
+  color: #555; 
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: text;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#bag ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+/* Titolo principale */
+#bag h1 {
+    font-size: 50px;
+    font-weight: bold; 
+    color: rgb(41,40,38);
+    text-align: center;
+    font-weight: 700; 
+    position: relative; 
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.853);
+    padding-top: 15px;
+}
+
+
+#bag h4{
+  font-size: 15px;
+  font-style: italic;
+  color: rgba(41, 40, 38); 
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/*------------------------------------
+        BUTTONS
+------------------------------------*/
+#bag button {
+  width: 60%;
+  height: 40px;
+  margin-top: 0; 
+  background-color: rgb(41,40,38);
+  border-radius: 50px;
+  color: #e6e6dd; 
+  padding: 3px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0;
+}
+
+#bag button:hover, #bag .acceptButtons:hover, #bag #addButton:hover{
+  transform: translateY(-1px);
+  color: white; 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#bag .acceptButtons, #bag #addButton {
+background-color: #0b6a73;
+color: #e6e6dd;
+font-weight: bold; /* Rende il testo più evidenziato */
+}
+
+/*bottoni accetta e rifiuta affianco ai consigliati*/
+#bag .listButtons {
+display: flex;
+flex-direction: row;
+gap: 5px; 
+}
+
+#bag .listButtons button, #bag .removeButton{
+width: 80px;
+font-size: 13px;
+}
+
+#bag .save {
+display: flex; 
+justify-content: center;
+}
+
+#bag button:disabled, #bag .acceptButtons:disabled, #bag #addButton:disabled {
+background-color: #ccc;
+color: #999;
+cursor: not-allowed;
+box-shadow: none;
+transform: none;
+}
+
+/*------------------------------------
+        LIST CONTAINER
+------------------------------------*/
+
+#bag .listContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*All'interno di bag e di ListContainer: RecapContainer & BagListContainer*/
+/*------------------------------------
+            RecapContainer
+------------------------------------*/
+#bag #recapContainer {
+    flex: 1;
+    background: radial-gradient(circle, #ffffff, #d4d4c8);
+    color: white;
+    padding: 20px;
+    border: 20px solid rgb(41,40,38);
+    border-radius: 30px; 
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    margin: 40px; 
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+#bag .recap {
+  height: 100%;
+}
+
+/*stili per le scritte interne al recap*/
+#bag .recap #destinazioneRecap {
+font-size: 50px;
+font-weight: 1000;
+color:rgb(41,40,38); 
+text-align: center;
+}
+
+#bag .recap #dataRecap {
+  font-size: 15px;
+  padding-bottom: 20px; 
+  text-align: center;
+}
+
+#bag .recap #dimensioneRecap,
+#bag .recap #tipoDiViaggioRecap,
+#bag .recap #compagniaRecap,
+#bag .recap #attivitaRecap {
+  font-size: 18px;
+  color: rgb(41,40,38); 
+}
+
+#bag .recap #weather {
+  font-size: 18px;
+  padding-top: 20px; 
+  color:rgba(41, 40, 38, 0.629); 
+}
+
+#bag .recap li{
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px; 
+  color: rgba(41, 40, 38, 0.629); 
+}
+
+#bag #dimensioneValigia, 
+#bag #compagnia, 
+#bag #tipoDiViaggio, 
+#bag #attivita, 
+#bag #data {
+  font-size: 15px;
+  font-weight: bolder;
+  color: #444; 
+}
+
+#bag #destinazione {
+  font-size: 60px;
+  font-weight: 600; 
+}
+
+/* Weather Icons */
+#bag .weatherIcons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: content-box;
+}
+
+#bag .weatherIcon {
+  width: 80px; 
+  padding: 5px; 
+}
+
+#bag .weatherIcon img {
+  width: 100%;
+  background:  radial-gradient(circle, #68c6c8, transparent 60%);
+
+}
+
+/*------------------------------------
+        BagListContainer
+------------------------------------*/
+  
+#bag #bagListContainer {
+  flex: 2;
+  padding: 40px;
+  border-radius: 30px; 
+  overflow-y: auto;
+  background: linear-gradient(#0b6a73, #06474d); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin: 20px; 
+}
+
+#bag .bagList {
+  background-color: #fff;
+  padding: 40px;
+  height: 100%;
+  border-radius: 30px;
+  display: flex; /*se qualcosa da problemi, è questo*/
+  flex-direction: column;
+  justify-content:space-between; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#bag .bagList ul li {
+  margin-top: 5px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between; 
+}
+
+#bag .bagList ul {
+  max-height: 200px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+
+#bag .bagList label {
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bold;
+  color: rgba(41, 40, 38); 
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#bag .addFlex, #bagName {
+  margin-top: 10px; 
+}
+
+#bag #dropZone {
+  height: 100%;
+}
+
+#bag .bagList .addFlex{
+  display: flex; 
+  flex-direction: row;
+  gap: 10px; 
+  justify-content: space-between; 
+}
+
+#bag .bagList .top {
+  display: flex; 
+  flex-direction: column;
+}
+
+#bag .bagList .save {
+  margin-top: 15px; 
+}
+
+#bag .bagList .tempItems {
+  color: #6e6e6e; 
+  border-radius: 15px;
+  padding-left: 10px; 
+}
+
+#bag .itemText {
+  color: black; 
+  padding-left: 10px; 
+}
+
+#list input {
+  width: 80px;
+  margin-right: 5px; 
+}
+
+/*------------------------------------
+        SLIDER
+------------------------------------*/
+
+#bag .slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none; 
+
+}
+
+#bag .item {
+  min-width: 200px;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px; 
+}
+
+#bag .item img {
+  width: 150px; 
+}
+
+#bag .item p {
+  font-size: 20px;
+  font-weight: 800;
+  color: rgb(41,40,38); 
+}
+
+#bag .item img:hover{
+  transform: scale(1.05); 
+  cursor: pointer; 
+  background: radial-gradient(circle, #68c6c8, transparent 60%);
+}
+
+
+/*------------------------------------
+        STYLE RESPONSIVE
+------------------------------------*/
+
+@media (max-width: 768px) {
+
+  #bag {
+    align-items: center;
+  }
+  
+  #bag .listContainer {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  #bag #bagListContainer, #bag .slider {
+    width: 90%;
+  }
+
+  #bag #recapContainer {
+    width: 80%;
+  }
+
+  #bag button {
+    font-size: small;
+  }
+
+}
+  
+
+
+
+
+
+
+  
+
+

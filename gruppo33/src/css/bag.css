@@ -1,0 +1,397 @@
+/*------------------------------------
+        STILI GENERALI
+------------------------------------*/
+body, main {
+    width: 100%; 
+    padding-top: 0px; 
+    margin-top: 0px;
+    box-sizing: content-box;
+}
+
+main {
+    background: linear-gradient(to bottom, rgb(0,0,0), #e6e6dd);
+}
+
+section ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.hidden {
+    display : none; 
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px; 
+}
+
+section .listContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section h4{
+    font-size: 15px;
+    font-style: italic;
+    margin: 0; 
+    text-align: left;
+    color: rgba(41, 40, 38, 0.629); 
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+/* visualizzabile quando viene condivisa la valigia */
+#usernameTxt {
+    font-size: 30px;
+    justify-content: center;
+    font-weight: bold;
+    color: #e6e6dd; 
+    align-items: baseline;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#username {
+    font-style: italic;
+    font-size: 30px;
+    justify-content: center;
+    font-weight: bold;
+    color: #e6e6dd; 
+    align-items: baseline;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*Animazione per l'username*/
+.fadeIn {
+    animation: fade-in 5s forwards; 
+} 
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*------------------------------------
+              HEADER
+------------------------------------*/
+.headerContainer {
+    background-color: rgba(0, 0, 0, 0.942);  
+}
+
+header .opacity {
+    background-color: rgba(0, 0, 0, 0.862); 
+}
+
+.headerButtons input {
+    color: #e6e6dd;
+}
+
+#loginButton:hover input, 
+#registerButton:hover input, 
+#profileButton:hover input, 
+#logoutHeaderButton:hover input, 
+#newBagLink:hover input {
+    color: white; 
+    cursor: pointer; 
+    margin-bottom: 12px; 
+}
+
+/*------------------------------------
+          BUTTONS
+------------------------------------*/
+
+section button {
+    width: 120px;
+    height: 50px;
+    margin: 0; 
+    background-color: rgb(41,40,38);
+    border-radius: 50px;
+    color: #e6e6dd; 
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+section button:hover,  
+section #addButton:hover, 
+section #savePasswordButton:hover, 
+section #shareButton:hover{
+    transform: translateY(-1px);
+    color: white; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#savePasswordButton, #addButton, #shareButton {
+    background-color: #0b6a73;
+    color: #e6e6dd;
+    font-weight: bold;
+}
+  
+section .bottomButtons.visible {
+    display: flex; 
+    justify-content: center;
+}
+
+section button:disabled, 
+section #addButton:disabled, 
+section #savePasswordButton:disabled, 
+section #shareButton:disabled{
+    background-color: #ccc;
+    color: #999;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+section #shareButton {
+    width: 100%; 
+    margin-top: 10px; 
+}
+
+/*All'interno di Section e di ListContainer: Nav & Article*/
+/*------------------------------------
+            NAV : RECAP
+------------------------------------*/
+
+section nav {
+    flex: 1;
+    background: radial-gradient(circle, #ffffff, #d4d4c8); 
+    color: white;
+    padding: 40px;
+    border: 20px solid rgb(41,40,38);
+    border-radius: 30px; 
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    margin: 20px; 
+    max-width: 500px;
+    margin: 20px; 
+}
+
+section nav li {
+    text-align: left;
+}
+
+section.recap {
+    height: 100%;
+}
+
+section .recap li{
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px; 
+    color: rgba(41, 40, 38, 0.629); 
+}
+
+/*stili per le scritte interne al recap*/
+.recap #destinazioneRecap {
+  font-size: 50px;
+  font-weight: 1000;
+  color:rgb(41,40,38); 
+  text-align: center;
+}
+
+section .recap #dataRecap {
+    font-size: 15px;
+    padding-bottom: 20px; 
+    text-align: center;
+}
+
+section .recap #dimensioneRecap, 
+section .recap #tipoDiViaggioRecap, 
+section .recap #compagniaRecap, 
+section .recap #attivitaRecap {
+    font-size: 18px;
+    color: rgb(41,40,38); 
+}
+
+section #destinazione {
+    font-size: 60px;
+    font-weight: 600; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+section #dimensioneValigia, #compagnia, #tipoDiViaggio, #attivita, #data{
+    font-size: 15px;
+    font-weight: bolder;
+    color: #444; 
+}
+
+/*------------------------------------
+        ARTICLE : BAGLIST
+------------------------------------*/
+
+section article {
+    flex: 2;
+    padding: 20px;
+    border-radius: 30px; 
+    overflow-y: auto;
+    background: linear-gradient(#0b6a73, #06474d); 
+}
+
+section .bagList {
+    height: 100%; 
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+section .bagList ul li {
+    margin-top: 5px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between; 
+ 
+}
+
+section .bagList ul {
+    max-height: 200px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+/*input per il nome della valigia*/
+#bagName {
+    background: none;
+    font-size: 50px;
+    border: none;
+    box-shadow: none;
+    cursor: text;
+    font-size: 50px;
+    font-weight: 1000;
+    color: #06474d; 
+    width: 100%; 
+    cursor: text;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+/*input per un nuovo elemento*/
+#newItem{
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 50px;
+    color: #555; 
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+/*sezioni dei bottoni in basso alla valigia*/
+.addFlex, .bottomButtons.visible {
+    display: flex; 
+    flex-direction: row;
+    justify-content:space-between;
+    gap: 20px; 
+    padding: 10px 0 10px 0; 
+}
+
+/*lista di oggetti nella valigia*/
+#list p {
+    font-size: 17px;
+    font-weight: bolder;
+    color: #444; 
+}
+
+#list .quantityInput:not(:disabled){
+    width: 60px;
+    margin-right: 5px; 
+    font-size: 16px;
+    border-radius: 50px;
+    color: #555; 
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#list .quantityInput:disabled {
+    width: 60px;
+    font-size: 16px;
+    border-radius: 50px;
+    color: #555; 
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0; 
+    background-color: white;
+}
+
+/*------------------------------------
+        STYLE RESPONSIVE
+------------------------------------*/
+@media (max-width: 768px) {
+    section {
+        align-items: center;
+    }
+
+    section .listContainer {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    section article, section .slider {
+        width: 90%;
+    }
+
+    section nav {
+        width: 80%;
+    }
+
+    section button {
+        font-size: small;
+    }
+
+    #usernameTxt {
+        padding: 30px; 
+    }
+}  
+      
+
+  
+/*------------------------------------
+        STYLE IN MODIFICA
+------------------------------------*/
+
+section nav, section article {
+    transition: box-shadow 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Quando le sezioni sono in modalità editabile */
+section nav.editable, section article.editable {
+    animation: vibrazione 0.2s 3 ease-in-out; 
+    box-shadow: 1px 8px 10px rgb(255, 255, 255);  
+}
+
+/* Animazione di vibrazione */
+@keyframes vibrazione {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(0.2deg); }
+    20% { transform: rotate(-0.2deg); }
+    30% { transform: rotate(0.2deg); }
+    40% { transform: rotate(-0.2deg); }
+    50% { transform: rotate(0deg); }
+    60% { transform: rotate(0.2deg); }
+    70% { transform: rotate(-0.2deg); }
+    80% { transform: rotate(0.2deg); }
+    90% { transform: rotate(-0.2deg); }
+    100% { transform: rotate(0deg); }
+}

@@ -1,0 +1,156 @@
+/* STILI GENERALI */
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    flex:1; 
+    margin-top: 50px;
+    position: relative;
+}
+
+body, html {
+    min-width: 320px;
+    background-color: #e6e6dd;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display:flex; 
+    flex-direction: column;
+}
+
+button {
+    cursor: pointer;
+}
+
+/*HEADER*/ 
+.headerContainer {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: nowrap; 
+    justify-content:space-between; 
+    align-items: center;
+    width: 100%;  
+    transition: backdrop-filter 0.3s ease, background-color 0.3s ease; 
+    top: 0;               
+    left: 0;   
+    height: 50px;
+    position: fixed;
+    z-index: 1000;
+    padding: 8px; 
+}
+
+header .opacity {
+    backdrop-filter: blur(5px); 
+}
+
+.headerContainer div, img {        
+    height: 100%;           
+    width: auto;            
+    object-fit: contain; 
+}
+
+.headerContainer img:hover {
+    opacity: 0.8;
+    cursor: pointer; 
+}
+
+.headerButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-right: 20px; 
+    padding: 10px;
+}
+
+.headerButtons input{
+    margin: 10px; 
+    align-content: center;
+    background-color: transparent; 
+    border: none;
+    font-weight: bold;  
+    text-align: center; 
+    font-size: 13px; 
+}
+
+.headerButtons a {
+    margin: 10px;
+    background-color: transparent;  
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    padding-block: 1px;
+    padding-inline: 6px;
+    display:inline-block; 
+    border: 2px solid transparent;
+    padding: 4px; 
+    color: #cfcfc7;  
+    text-decoration: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+}
+
+.headerButtons a:hover {
+    color: white; 
+    cursor: pointer; 
+    border: 2px solid white;
+    margin-bottom: 12px;
+}
+
+#loginHeaderButton:hover div,
+#registerHeaderButton:hover div {
+    cursor: pointer; 
+    
+}
+
+#loginButton:hover input,
+#profileButton:hover input,
+#registerButton:hover input,
+#newBagLink:hover input,
+#logoutHeaderButton:hover input {
+    cursor: pointer; 
+    margin-bottom: 12px; 
+}
+
+/*HEADER*/
+
+
+/*FOOTER*/ 
+
+.footerContainer {
+    background-color: rgb(41,40,38); 
+    display: flex; 
+    flex-direction: column;
+    flex-wrap: nowrap; 
+    justify-content: center; 
+    align-items: center;
+    width: 100%;  
+    padding: 10px; 
+    color: #e6e6dd;  
+    bottom: 0;               
+    left: 0; 
+    display: block; 
+}
+
+.logoFooter {
+    width: 100%;
+    height: 100px;
+    align-content: center;
+}
+
+footer {
+    text-align: center; 
+}
+
+footer a {
+    color: white; 
+    text-decoration: underline;
+    font-size: 13px; 
+    margin: 10px; 
+}
+/*FOOTER*/
