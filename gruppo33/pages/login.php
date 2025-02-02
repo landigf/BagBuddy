@@ -357,10 +357,10 @@ $email = isset($_SESSION['register_data']['email']) ? htmlspecialchars($_SESSION
                 <a href="login.php">Accedi o registrati</a>
             </div>
             <div>
-            <address>Hai riscontrato un errore oppure hai bisogno di aiuto? <a href="mailto:support@bagbuddy.com" >Contattaci</a></address>
+            <address>Hai riscontrato un errore oppure hai bisogno di aiuto? <a href="mailto:bagbuddy33@gmail.com">Contattaci</a></address>
             </div>
             <div>
-                <p>© 2025 BagBuddy.</p>
+              <p>&copy; 2025 BagBuddy.</p>
             </div>
         </div>
     </footer>
