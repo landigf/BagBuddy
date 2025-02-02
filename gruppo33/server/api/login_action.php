@@ -24,8 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
                 'id' => $user['id'],
                 'username' => $user['username'],
                 'email' => $user['email'],
-                'info' => $user['info'],
-                'preferences' => $user['preferences']
+                'info' => json_decode($user['info'], true),
+                'preferences' => json_decode($user['preferences'], true)
             );
 
             if (isset($_SESSION['unsavedBag'])) {
