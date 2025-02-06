@@ -434,6 +434,8 @@ function onCancelBag() {
     if (!confirm("Sei sicuro di voler annullare le modifiche?")) {
       return;
     }
+  } else {
+    return; // nessuna moifica effettuata
   }
   const listElement = document.getElementById('list');
   listElement.innerHTML = '';
