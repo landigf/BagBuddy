@@ -84,6 +84,7 @@ function calcolaConsigliati($oggetti, $preferenze, $weatherData) {
         ];
     }
 
+    // User defined sort
     usort($sortedByScore, function($a, $b) {
         return $b['score'] - $a['score'];
     });
